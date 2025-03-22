@@ -25,26 +25,12 @@ git clone https://github.com/your-username/sentiment-analysis-api.git
 cd sentiment-analysis-api
 ```
 
-### Deploying the Model
-1. **Upload the model to Google Cloud Storage**
-   ```sh
-   gsutil cp -r model gs://your-bucket-name/
-   ```
-2. **Deploy the model on AI Platform**
-   ```sh
-   gcloud ai models create sentiment-analysis-model --region=us-central1 --framework=TENSORFLOW --runtime-version=2.8 --python-version=3.8
-   ```
-3. **Create a model version**
-   ```sh
-   gcloud ai versions create v1 --model=sentiment-analysis-model --origin=gs://your-bucket-name/model --runtime-version=2.8 --python-version=3.8 --framework=TENSORFLOW
-   ```
-
 ## API Usage
 Once deployed, you can send requests to the API:
 ```sh
 curl -X POST -H "Content-Type: application/json" \  
      -d '{"text": "I love this product!"}' \  
-     https://your-api-endpoint/predict
+     [https://your-api-endpoint/predict](https://dashboard.render.com/project/prj-cujq1qt2ng1s73bb1tcg#:~:text=Sentiment_Analysis_Model)
 ```
 ### Response Example
 ```json
@@ -58,5 +44,5 @@ curl -X POST -H "Content-Type: application/json" \
 This project is licensed under the MIT License.
 
 ## Contact
-For any issues or suggestions, feel free to open an issue or reach out at [ameyakannurkar@gmail.com](mailto:ameyakannurkar@gmail.com).
+For any issues or suggestions, feel free to open an issue or reach out at [samyakmeshram2020@gmail.com](mailto:samyakmeshram2020@gmail.com).
 
